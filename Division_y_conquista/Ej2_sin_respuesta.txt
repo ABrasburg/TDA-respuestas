@@ -1,0 +1,8 @@
+Un colaborador del laboratorio de “cálculo automatizado S.A” propone un nuevo método de multiplicación de matrices. 
+Utiliza división y conquista partiendo la matrices en bloques de tamaño n/4 x n/4. Y el proceso de combinación de resultados llevara Θ(n2). 
+Se muestra vago en indicar la cantidad de subproblemas que creará cada paso. 
+Le indican que este dato es fundamental para decidir si proseguir con esa línea de investigación o no. 
+Actualmente utilizan el algoritmo de Strassen con una complejidad de O(nlog2(7)). Siendo T (n) = aT (n/4) + Θ(n2), con a la información a determinar. 
+¿Cuál es la cantidad de subproblemas más grande que puede tomar la solución para que sea mejor que su algoritmo actual?
+
+El algoritmo de Strassen tiene una complejidad de O(nlog2(7)) = O(n^2.81).
