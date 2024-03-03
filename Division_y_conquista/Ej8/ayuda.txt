@@ -1,0 +1,10 @@
+Algunas cositas a aprovechar serían.
+- Por un lado se pide división y conquista, así que conviene encarar por ahí.
+- El hecho que nos garanticen dimensiones potencias de 2 nos permite siempre poder partir a la mitad, hasta llegar a un cuadrado de 2x2
+- Al ser una figura bidimensional, conviene partir en 4 secciones, lo que corresponde con partir a la mitad el eje x y el eje y
+- El caso base, el más pequeño sería un cuadrado de 2x2, y asumiendo que uno de los espacios ya fue ocupado, lo único que resta es agregar la figura de L
+- Luego habría que aprovechar un poco la propiedad matemática / geométrica de que, sin importar dónde esté el espacio de sumidero, el problema siempre tiene solución
+- Al partir en 4 partes, siempre nos queda 1 de las partes que tiene el espacio de sumidero, y los otras 3 nos garantizan tener una cantidad de espacios múltiplo de 3, que podrán ser también completados con formas L
+- Lo que faltaría es reconvertir estos 3 problemas que tenemos técnicamente sin sumideros, o problemas con sumidero, tal que se pueda resolver recursivamente
+- Lo que se puede ver con respecto a eso es que se puede colocar 1 figura en forma de L que ocupe un espacio de cada uno de los subproblemas que aún no tienen sumidero. De esa manera estamos agregando una figura de L, y técnicamente estamos generando 3 subproblemas que ahora tiene un espacio de 1x1 que no podemos ocupar porque ya está ocupado. En la llamada recursiva hacemos de cuenta que ese es el sumidero, y ya nos quedaría la posibilidad de resolver recursivamente
+- la ubicación de esa figura L antes de la llamada recursiva se ubicaría entonces en una posición en particular, que requiere conocer en cuál de los 4 cuadrantes está el sumidero de nuestro problema, y luego ubicar la L exactamente en el centro de la figura, tal que cubra un espacio de cada uno de los 3 cuadrantes que no tienen sumidero

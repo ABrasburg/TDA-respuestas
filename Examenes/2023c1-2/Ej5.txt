@@ -1,0 +1,14 @@
+En el reino de Gondor ha incrementado enormemente la delincuencia luego de su urbanización. El rey Aragorn no
+quiere que todo su esfuerzo en construir calles resulte en vano, por lo que quiere poner guardianes a vigilar las calles por
+las noches. El problema es que cuesta mucho dinero entrenar a dichos guardianes, por lo que quiere reducir al mínimo
+la cantidad que sean necesarios entrenar. Sabe que cada guardian puede estar vigilando desde una esquina, y desde allí
+tener visibilidad hasta cualquier otra esquina directa. Necesita determinar la cantidad mínima de guardianes que son
+necesarios para cubrir todas las calles de su reino. Como primera medida, consulta con el oráculo Alumnus Teorius
+Algoritmus (es decir, quien lee esta consigna), para determinar si esto es conseguible en corto tiempo (el oráculo le
+pregunó algo sobre tiempo polinomial, que Aragorn no entendió y le dijo “si, eso”).
+Tenemos que explicarle a Aragorn que este pedido no es realizable (y debe armarse de paciencia, o no buscar el mínimo
+exacto), porque el problema de Guardianes de Gondor es, en realidad, un problema NP-Completo (en su versión de
+problema de decisión: “¿Se pueden vigilar todas las calles con esta topología con máximo K guardianes?”).
+
+Lo transformo a Vertex Cover donde cada esquina es un vértice y cada calle es un arista.
+Esto es porque si tengo un vértice que no es cubierto por un guardia, entonces las dos calles que salen de ese vértice no están cubiertas.

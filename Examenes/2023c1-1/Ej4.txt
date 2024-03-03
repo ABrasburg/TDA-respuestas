@@ -1,0 +1,30 @@
+Realizar un seguimiento de aplicar el Algoritmo de Huffman al texto “PRETERINTENCIONALIDAD”, indicando el
+binario resultante de comprimirlo.
+
+P = 1
+R = 2
+E = 3
+T = 2
+I = 3
+N = 3
+C = 1
+A = 2
+O = 1
+L = 1
+D = 2
+
+I - 3 -- 6  ------- 13 ----------- 21
+N - 3   (IN)        (INERT)
+E - 3 -------- 7
+R - 2 -- 4   (ERT)
+T - 2   (RT)
+A - 2 -- 4 --------- 8
+D - 2   (AD)        (ADCPOL)
+P - 1 -- 2  -- 4
+C - 1   (CP) (CPOL)
+O - 1 -- 2
+L - 1   (OL)
+
+La derecha es 0 y la izquierda es 1
+1100 
+P

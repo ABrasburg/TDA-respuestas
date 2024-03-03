@@ -1,0 +1,8 @@
+Realizar una reducción polinomial del problema del ejercicio 3 a otro de los vistos durante la cursada. Ayuda: pensar en
+alguno de los vistos de programación dinámica.
+
+Como dije en ese mismo problema es muy parecido al problema del cambio de monedas, por lo que se puede reducir a este problema. La reducción es la siguiente:
+Asi que solo haciendo un paso extra transformando las monedas en sqrt(moneda) se puede reducir el problema de las monedas a mi problema.
+
+Ahora si me decis que las monedas que tengo son como en un sistema normal de monedas, el problema ya pasa a ser la solucion
+del problema de forma greedy.

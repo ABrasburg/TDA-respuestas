@@ -1,0 +1,17 @@
+Un set dominante (Dominating Set) de un grafo G es un subconjunto D de vértices de G, tal que todo vértice de G
+pertenece a D o es adyacente a un vértice en D. El problema de decisión del set dominante implica, dado un grafo G y
+un número k, determinar si existe un set dominante de a lo sumo tamaño k.
+Demostrar que el Dominating Set Problem es un problema NP-Completo. Ayuda: recomendamos recordar Vertex Cover,
+que puede ser útil para esto.
+
+Vertex cover nos pide un conjunto de nodos tal que cada arista tenga al menos un nodo en el conjunto.
+Dominant Set es NP porque validarlo es solo recorrer los nodos y ver si cada nodo o sus adyacentes están en el conjunto.
+Para demostrar que es NP completo, vamos a reducir Vertex Cover a Dominant Set.
+Dado un grafo G, vamos a construir un grafo G' que tenga un set dominante de tamaño k si y solo si G tiene un vertex cover de tamaño k.
+Para esto, vamos a hacer que G' sea el mismo grafo que G, por cada arista (u, v) vamos a agregar un nodo w y dos aristas (u, w) y (v, w).
+- Si G tiene un vertex cover de tamaño k quiere que decir que para todo vertice u o v, al menos uno de ellos está en el vertex cover y
+  los nodos w no están en el vertex cover, por lo que el set dominante de G' es el vertex cover de G.
+- Si G' tiene un set dominante de tamaño k pueden pasar dos cosas:
+  - Si el set dominante no tiene nodos w, entonces el set dominante es un vertex cover de G.
+  - Si el set dominante tiene nodos w tenemos que reemplazar cada nodo w por el nodo u o v que lo conecta, y el set dominante sigue siendo un vertex cover de G.
+Por lo tanto, Dominant Set es NP completo.

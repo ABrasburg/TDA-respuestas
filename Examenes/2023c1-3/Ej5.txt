@@ -1,0 +1,7 @@
+Definir la relación entre la dificultad entre el problema del ejercicio 4 con el problema de obtener el corte mínimo en una
+red de transporte. ¿Se puede concluir si alguno de estos problemas es NP-Completo, o que no lo sea? ¿Estos problemas
+pertenecen a PSPACE? Justificar adecuadamente cada respuesta.
+
+El ejercicio 4 es el problema de buscar si hay al menos 5 caminos de un nodo a otro sin repetir aristas
+El problema de obtener el corte mínimo en una red de transporte es el problema de encontrar el conjunto de aristas
+ de menor peso que al eliminarlas, desconecten el grafo.

@@ -1,0 +1,17 @@
+¿El problema del ejercicio 2 se encuentra en NP? ¿Qué problema NP-Completo visto en la cursada es semejante al
+indicado al del problema del ejercicio 2? ¿qué reducción podríamos hacer? ¿podemos concluir que el problema del
+ejercicio 2 es un problema NP-Completo?
+
+El problema del ejercicio 2 se encuentra en NP ya que validar una solución es facil, solo es recorrer los submarinos
+y ver que esten todos cubiertos por al menos un faro
+
+Para realizar la reducción desde Set Cover al problema del ejercicio 2, podemos seguir estos pasos:
+
+Consideramos que cada elemento en U corresponde a una celda en la matriz. Por lo tanto, tenemos una matriz M de tamaño
+ m x n, donde m es la cantidad de elementos en U y n es la cantidad de subconjuntos en S.
+Si un elemento u_i está en un subconjunto s_j, marcamos la celda correspondiente a la intersección de la fila i y la
+ columna j en la matriz con un submarino (es decir, un valor de 1). De lo contrario, esa celda permanece vacía
+ (un valor de 0).
+El objetivo es encontrar la cantidad mínima de faros necesarios para iluminar todos los submarinos en la matriz M.
+
+Por lo tanto, podemos concluir que el problema del ejercicio 2 es un problema NP-Completo.

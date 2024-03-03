@@ -1,0 +1,31 @@
+Hacer un seguimiento del algoritmo de Quicksort, con selección aleatoria de pivot, para ordenar los siguientes
+elementos: 45 14 24 35 16 11 30 15 39 19 41. Para las selecciones aleatorias de pivot, considerar que el primer
+elemento elegido es el 16. Para las siguientes selecciones aleatorias tuvimos “suerte”, siempre se seleccionó el valor
+de la mediana en cada caso.
+
+[14 11 15] 16 [45 24 35 30 39 41]
+[11] 14 [15] 16 [24 30] 35 [39 41 45]
+11 14 15 16 24 30 35 39 41 45
+
+Indicar la complejidad temporal esperada de Quicksort.
+
+La complejidad temporal esperada de Quicksort es O(n log n) en el caso promedio, donde n es la cantidad de elementos a ordenar.
+
+Mostrar un Árbol Binario de Búsqueda que, si se lo construye apropiadamente, realiza las mismas comparaciones
+que el segumiento de Quicksort detallado anteriormente. Indicar de qué manera se construyó el árbol.
+
+El árbol binario de búsqueda que realiza las mismas comparaciones que el seguimiento de Quicksort detallado anteriormente es el siguiente:
+
+        16
+       /  \
+     14    35
+    / \   /  \
+   11 15 30  41
+        /   /  \
+       24  39  45
+
+Para armar el arbol agarre el 16 como raiz porque es la primera comparacion y use las medianas de cada lado para armar el arbol.
+
+Indicar cuáles serían las peores selecciones de pivot e indicar en qué complejidad temporal resultaría.
+
+La peor opcion seria el mayor o menor elemento de la lista, ya que en ese caso la complejidad temporal resultaria O(n^2), donde n es la cantidad de elementos a ordenar.

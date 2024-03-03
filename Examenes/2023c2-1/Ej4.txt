@@ -1,0 +1,9 @@
+El problema de selección de caminos (Path Selection) pregunta: dado un grafo dirigido G y un set de pedidos P1, P2, ..., Pc
+de caminos dentro de dicho grafo y un número k, ¿es posible seleccionar al menos k de esos caminos tales que ningún
+par de ellos compartan ningún nodo?
+Path Selection es un problema NP-Completo. Ahora bien, queremos demostrar nuevamente (pero de otra forma a la
+vista en clase) que Independent Set es un problema NP-Completo. Demostrar que Independent Set es un problema
+NP-Completo, utilizando Path Selection para esto.
+
+Me creo un G' donde sus nodos son los mismos que G y cada nodo vi se conecta con todos los nodos con los que comparte un Path
+y elimino todos los nodos que quedaron aislados. Luego si en G' existe un Independent Set de tamaño k, entonces en G existe un Path Selection de tamaño k.

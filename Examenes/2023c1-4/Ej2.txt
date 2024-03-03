@@ -1,0 +1,43 @@
+# Para ayudar a personas con problemas visuales (por ejemplo, daltonismo) el gobierno de Agrabah decidió que en una
+# misma parada de colectivo nunca pararán dos colectivos que usen el mismo color. El problema es que ya saben que eso
+# está sucediendo hoy en día, así que van a repintar todas las líneas de colectivos. Por problemas presupuestarios, sólo
+# pueden pintar los colectivos de kcolores diferentes (por ejemplo, k= 4, pero podría se otro valor). Como no quieren
+# parecer un grupo de improvisados que malgasta los fondos públicos, quieren hacer un análisis para saber si es posible
+# cumplir con lo pedido (pintar cada línea con alguno de los kcolores, de tal forma que no hayan dos de mismo color
+# coincidiendo en la misma parada). Considerando que se tiene la información de todas las paradas de colectivo y qué
+# líneas paran allí, modelar el problema utilizando grafos e implementar un algoritmo que determine si es posible resolver
+# el problema. Indicar la complejidad del algoritmo implementado.
+
+# Para crear el grafo primero creo un nodo por colectivo y luego creo una arista entre dos nodos si comparten una parada
+# Luego, si el grafo es k-coloreable, es decir, si se puede colorear con k colores de tal forma que no haya dos nodos
+
+def k_coloreable(grafo, k):
+    colores = [0] * len(grafo.nodos)
+    return k_coloreable_aux(grafo, k, colores, 0)
+
+def k_coloreable_aux(grafo, k, colores, nodo):
+    if nodo == len(grafo.nodos):
+        return True
+    for color in range(k):
+        if es_valido(grafo, colores, nodo, color):
+            colores[nodo] = color
+            if k_coloreable_aux(grafo, k, colores, nodo+1):
+                return True
+            colores[nodo] = 0
+    return False
+
+def es_valido(grafo, colores, nodo, color):
+    for i in range(len(grafo.nodos)):
+        if grafo.nodos[i] in grafo.vecinos[grafo.nodos[nodo]] and colores[i] == color:
+            return False
+    return True
+
+def k_coloreo_inicio(paradas, colectivos, k):
+    grafo = Grafo
+    for colectivo in colectivos:
+        grafo.agregar_nodo(colectivo)
+    for parada in paradas:
+        for i in range(len(parada)):
+            for j in range(i+1, len(parada)):
+                grafo.agregar_arista(parada[i], parada[j])
+    return k_coloreable(grafo, k)

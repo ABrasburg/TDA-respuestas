@@ -1,0 +1,30 @@
+Dado un Grafo, un Vertex Cover es el mínimo Subset de vértices, tal que se cubran todas las aristas, es decir, que cada
+arista tenga por lo menos uno de sus extremos perteneciendo al Vertex Cover. El uso de cada Vértice vi tiene un costo
+wi. Queremos minimizar la sumatoria de los pesos de los vértices utilizados.
+a. Mostrar alguna metodología que nos permita resolver este problema aproximadamente. Demostrar que se trata de
+una 2-Aproximación.
+b. ¿Podemos aprovechar el Vertex Cover resultante para resolver aproximadamente el problema de Independet Set?
+Justificar.
+
+a) Para aproximar Vertex cover con pesos voy a usa programacion lineal entera.
+
+minimizar sumatoria de wi * xi
+sujeto a:
+xi + xj >= 1 para todo (i,j) en E
+xi = 0 o 1 para todo i en V
+
+El problema de programacion lineal entera es NP-Hard, pero podemos relajarlo a un problema de programacion lineal
+convencional, y luego redondear la solucion para obtener una solucion entera.
+
+La solucion relajada es la siguiente:
+xi + xj >= 1 para todo (i,j) en E
+0 <= xi <= 1 para todo i en V
+
+Entonces sea S* la solucion por programacion entera y S la solucion relajada.
+La solucion por programacion lineal paga 0.5 o mas por cada wi mientras que la solucion por programacion entera paga
+wi por cada vertice. Entonces la solucion por programacion lineal es a lo sumo el doble de la solucion por programacion
+entera.
+
+b) No aproxima bien porque supongamos que el grafo tiene un VC de tamaño V/2, entonces el Independent Set tiene tamaño
+V/2, pero dado el error de aproximacion, el VC puede tener tamaño V, entonces el Independent Set puede tener tamaño 0.
+Entonces la aproximacion nos da maximo el set vacio y es una aproximacion muy mala.

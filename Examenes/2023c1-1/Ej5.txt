@@ -1,0 +1,10 @@
+El Partition Problem como problema de optimización se describe tal que: Dado un conjunto de n números positivos
+T ={T1, T2, . . . , Tn}, se particionar los números en dos subconjuntos (con intersección vacía y unión = T ) de forma de
+minimizar la sumatoria de cualquiera de los subconjuntos.
+Para este problema, podemos plantear el siguiente algoritmo aproximado: Inicializar la solución como dos subconjuntos
+vacíos recorriendo los elementos de T, para cada elemento se lo coloca en el subconjunto con menor sumatoria hasta el
+momento. Demostrar que el algoritmo propuesto es un 3/2-Aproximación.
+
+Si esta ordenado de mayor a menor, el algoritmo propuesto es un 3/2-Aproximación.
+Sino es un 2-Aproximación.
+(Ver resolucion de Balanceo de cargas)

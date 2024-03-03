@@ -1,0 +1,13 @@
+# En un hospital, se tiene un conjunto de médicos y un conjunto de pacientes. Cada médico tiene un horario con franjas
+# horarias disponibles para citas médicas. Nuestro objetivo es emparejar médicos con pacientes de manera que se maximice
+# el número total de citas médicas programadas. Implementar un algoritmo que resuelva dicho problema de manera
+# eficiente. Indicar y justificar la complejidad del algoritmo implementado.
+
+Construir un grafo bipartito donde cada médico está conectado con los pacientes que puede atender en sus franjas horarias disponibles.
+Inicializar el flujo por toda la red en 0.
+Mientras haya un camino en la red residual desde el nodo fuente hasta el nodo sumidero:
+    Aumentamos el flujo acorde al camino encontrado.
+    Actualizar el emparejamiento aumentando el flujo a lo largo del camino aumentante.
+Devolver el emparejamiento resultante como la asignación óptima de médicos a pacientes.
+La complejidad de este algoritmo depende principalmente de la forma en que se implemente la búsqueda de camino aumentante. 
+En el peor caso, la complejidad puede alcanzar O(V⋅E), pero en la práctica suele ser mucho más eficiente.
